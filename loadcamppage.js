@@ -35,7 +35,9 @@ if (selectedCamp) {
         </div>
     `
    })
-    ;
+   reviewWrapper.innerHTML += `
+        <button id="comment-open-btn" class="primary-btn"><i class="fa-regular fa-comment-dots"></i>Leave a Review</button>
+    `;
 } else {
     // Handle the case when no campground is selected
     const campDetailsWrapper = document.querySelector('#camp-details-wrapper');
