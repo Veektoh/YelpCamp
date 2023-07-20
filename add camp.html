@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YelpCamp Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="home-header">
+        <div id="logo-div">
+            <a href="home.html"><img src="images\Logo.svg" alt="Logo"></a>
+            <div class="menu-bar-div">
+                <button class="menu-bar-btn"><img src="images\Hamburger Menu.svg" alt="Menu Bar"></button>
+            </div> 
+        </div>
+        <nav id="nav-div">
+            <ul id="nav-wrapper">
+                <li><a href="home.html">Home</a></li>
+                <li id="account-div">
+                    <button><a href="signin.html" class="black-cl">Login</a></button>
+                    <a href="signup.html"><button class="primary-btn">Create an account</button></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="back-to-home" class="back-to-home-margin">
+            <a href="home.html"><i class="fa-solid fa-arrow-left-long"></i>Back to campgrounds</a>
+        </section>
+        <section id="add-camp-section">
+            <div id="add-camp-wrapper">
+                <label for="add-camp-name">Campground Name</label>
+                <input id="add-camp-name" type="text" placeholder="Steven Sisters Waterfall">
+                <label for="add-camp-price">Price</label>
+                <input id="add-camp-price" type="text" placeholder="$149">
+                <label for="add-camp-image">Image</label>
+                <input id="add-camp-image" type="text" placeholder="www.image.png">
+                <label for="add-camp-description">Description</label>
+                <textarea name="Description" id="" cols="30" rows="10" placeholder=""></textarea>
+                <button class="primary-btn">Add Campground</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-logo-div">
+            <img src="images\Logo.svg" alt="logo">
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

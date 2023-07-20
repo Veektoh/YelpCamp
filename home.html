@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YelpCamp Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="home-header">
+        <div id="logo-div">
+            <a href="home.html"><img src="images\Logo.svg" alt="Logo"></a>
+            <div class="menu-bar-div">
+                <button class="menu-bar-btn"><img src="images\Hamburger Menu.svg" alt="Menu Bar"></button>
+            </div> 
+        </div>
+        <nav id="nav-div">
+            <ul id="nav-wrapper">
+                <li><a href="home.html">Home</a></li>
+                <li id="account-div">
+                    <button><a href="signin.html" class="black-cl">Login</a></button>
+                    <a href="signup.html"><button class="primary-btn">Create an account</button></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="search-section">
+            <div id="search-div-wrapper">
+                <h2>Welcome to <br> YelpCamp!</h2>
+                <p>view our hand-picked campgrounds from all
+                     over the world, or add your own.
+                </p>
+                <div class="search-div">
+                    <input id="search-input-div" type="search" placeholder="Search for camps">
+                    <button class="primary-btn">Search</button>
+                </div>
+                <a href="add camp.html"> Or add your own campground</a>
+            </div>
+        </section>
+        <section id="campground-section">
+            <div id="campground-card-wrapper-div">
+                <!-- <div class="campground-card-div">
+                    <div class="campground-card-img-div">
+                        <img src="images\Camp Images\High Quality Images\Mount Ulap.png" alt="">
+                    </div>
+                    <div class="campground-card-details-div">
+                        <h3>Mount Ulap</h3>
+                        <p>One of the most famous hikes
+                             in Benguet is Mt Ulap in Itogon
+                        </p>
+                    </div>
+                    <a href="camp.html"><button class="secondary-btn">View Campground</button></a>
+                </div> -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-logo-div">
+            <img src="images\Logo.svg" alt="logo">
+        </div>
+    </footer>
+    <script src="app.js"></script>
+    <script src="loadcamps.js"></script>
+</body>
+</html>

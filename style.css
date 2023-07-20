@@ -1,0 +1,650 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200&display=swap');
+html {
+    font-size: 10px;
+    font-family: 'Archivo', sans-serif;
+    --line-height: 1.5;
+    --primary-color: rgb(87, 86, 86);
+    --secondary-color: white;
+    --bg-color: #F9F6F1;
+    --black-color: black;
+    --sm-fs: 1rem;
+    --md-fs: 1.5rem;
+    --lg-fs: 2rem;
+    --xl-fs: 2.5rem;
+    --xxl-fs: 3rem;
+    --xxxl-fs: 4rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    /* outline: 1px dashed black; */
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+button {
+    background: none;
+    cursor: pointer;
+    font-size: inherit;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+body {
+    font-size: var(--md-fs);
+    color: var(--primary-color);
+    line-height: var(--line-height);
+}
+header:not(#landing-page-header){
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    padding: 4rem 7.5%;
+}
+
+nav #nav-wrapper, nav #account-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--black-color);
+    font-size: var(--md-fs);
+}
+nav #nav-wrapper {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    background-color: var(--bg-color);
+    padding: 10rem 2rem 6rem;
+    border-radius: 7px;
+    transform: translateX(300px);
+    transition: transform 0.5s ease-in-out;
+}
+.black-cl {
+    color: var(--black-color) !important;
+}
+.show-menu {
+    transform: translateX(0) !important;
+}
+#logo-div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 100;
+}
+.menu-bar-div .menu-bar-btn {
+    background: var(--bg-color);
+    border-radius: 3px;
+    padding: 0.5rem;
+}
+.primary-btn {
+    background-color: var(--black-color);
+    color: var(--secondary-color);
+    padding: 1.5rem 2.5rem;
+    border-radius: 4px;
+}
+.secondary-btn {
+    background-color: var(--secondary-color);
+    color: var(--black-color);
+    border: 2px solid var(--bg-color);
+    padding: 1.5rem 2.5rem;
+    border-radius: 4px;
+    font-size: var(--md-fs);
+    font-weight: bold;
+}
+/* search section */
+#search-section {
+    width: 85%;
+    margin: 8.5rem auto 0;
+    background-color: var(--bg-color);
+    border-radius: 3px;
+    padding: 4rem 0;
+}
+#search-div-wrapper {
+    width: clamp(200px, 80%, 500px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+#search-div-wrapper h2 {
+    color: var(--black-color);
+    line-height: normal;
+}
+#search-div-wrapper p {
+    max-width: 300px
+}
+#search-div-wrapper a {
+    text-decoration: underline;
+}
+.search-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#search-div-wrapper #search-input-div {
+    padding: 1.2rem 2.5rem;
+    border-radius: 4px;
+    appearance: none;
+    font-size: 1.6rem;
+}
+#search-div-wrapper #search-input-div:focus {
+    border: 2px solid black;
+}
+#search-div-wrapper #search-input-div::placeholder {
+    opacity: 0.9;
+}
+
+/* landing page hero div */
+#landing-page {
+    background-color: var(--bg-color);
+}
+#landing-page-header {
+    margin: 2.5rem auto;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#hero-div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#hero-div #hero-img-div {
+    height: 300px;
+    overflow: hidden;
+}
+#hero-div #hero-img-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 70%;
+}
+#hero-div #hero-details-div {
+    padding: 5%;
+}
+#hero-div #hero-details-div > * {
+    margin-bottom: 1.5rem;
+}
+#hero-div #hero-details-div h2 {
+    color: var(--black-color);
+    font-weight: 600;
+    line-height: normal;
+    font-size: clamp(var(--xxl-fs), 4vw , 40px);
+    width: clamp(100px, 80%, 800px);
+}
+#hero-div #hero-details-div h4 {
+    font-weight: 400;
+}
+#hero-div #hero-details-div .features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+#hero-div #hero-details-div .features-list li {
+    position: relative;
+    padding-left: 3.5rem;
+}
+#hero-div #hero-details-div .features-list li::before {
+    content: url(./images/Checkmark.svg);
+    position: absolute;
+    left: 0;
+}
+#hero-div #hero-details-div .partner-list {
+    display: flex;
+}
+#hero-div #hero-details-div button {
+    margin: 1rem 0 3rem 0;
+}
+/* campground section  */
+
+#campground-section {
+    width: 90%;
+    margin: 5rem auto;
+}
+#campground-card-wrapper-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    margin: 0 auto;
+}
+.campground-card-div {
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:2rem;
+    gap: 2rem;
+    border: 2px solid var(--bg-color);
+    border-radius: 6px;
+}
+.campground-card-img-div {
+    width: 100%;
+    height: 200px;
+    background-color: var(--bg-color);
+    overflow: hidden;
+    border-radius: 6px;
+}
+.campground-card-img-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.campground-card-details-div h3{
+    color: var(--black-color)
+}
+.campground-card-details-div p {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+
+/* sign up */
+#signup-header {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin: 0 auto 2rem;
+    height: none;
+    position: relative;
+    top: 20px;
+    padding: 2rem 0;
+}
+#signup-div {
+    display: flex;
+    flex-direction: column;
+}
+#signup-div .right-col {
+    background-color: var(--bg-color);
+    padding: 5rem 2rem;
+}
+#signup-div .right-col .testimony-div {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+#signup-div .right-col h3 {
+    color: var(--black-color);
+    font-size: var(--lg-fs);
+}
+#signup-div .right-col h4 {
+    color: var(--black-color);
+    font-size: var(--md-fs);
+}
+#signup-div h2{
+    color: var(--black-color);
+    font-weight: 600;
+    line-height: normal;
+    font-size: clamp(var(--xxl-fs), 4vw , 40px);
+    width: clamp(100px, 80%, 400px);
+}
+#signup-div .left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 85%;
+    margin: 4rem auto;
+}
+#signup-div .left-col input{
+    display: block;
+    background-color: var(--bg-color);
+    margin-top: 1rem;
+    padding: 1.7rem 1rem;
+    border-radius: 4px;
+    font-size: 1.6rem;
+}
+#signup-div .left-col input::placeholder{
+    opacity: 0.6;
+}
+#signup-div .left-col input, #signup-div .left-col button {
+    width: clamp(200px, 100%, 550px);
+}
+#signup-div .left-col .signin-div a {
+    text-decoration: underline;
+    color: rgb(29, 201, 231);
+}
+
+
+/* camp pages */
+#camp-page-main {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 3rem;
+}
+
+#camp-page-main {
+    margin-top: 10rem;
+}
+#camp-details-section, #reviews-section,
+#map-section {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.camp-details-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem;
+    border: 2px solid var(--bg-color);
+}
+.camp-img-div {
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.camp-img-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.camp-name-price-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.camp-details-card h2, .review-div h3 {
+    color: var(--black-color);
+}
+
+/* Reviews comment */
+
+#reviews-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--bg-color);
+}
+#reviews-wrapper button {
+    width: 200px;
+    margin: 3rem auto 3rem 3rem;
+    padding: 2rem 0 ;
+}
+#reviews-wrapper button i {
+    margin-right: 1rem;
+}
+.review-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 auto;
+    width: 90%;
+    padding: 2.5rem 0.8rem;
+}
+.review-div:not(:last-child) {
+    border-bottom: 2px solid var(--bg-color);
+}
+.author-time-div {
+    display: flex;
+    justify-content: space-between;
+}
+#map-div {
+    border: 2px solid var(--bg-color);
+    padding: 3rem;
+}
+.map-img-div {
+    display: flex;
+    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
+    border-radius: 5px;
+}
+#map-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#back-to-home {
+   display: flex;
+   margin-left: 3rem;
+}
+
+/* coomment div */
+#comment-div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 70%;
+    border: 2px solid var(--bg-color);
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+}
+.hide{
+    display: none !important;
+}
+#comment-div::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--secondary-color);
+    opacity: 0.8;
+    width: 300%;
+    height: 300%;
+    z-index: -1000;
+}
+#comment-div-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 2px solid var(--bg-color);
+    padding: 3rem;
+    background-color: var(--secondary-color);
+}
+.back-to-home-margin{
+    margin-top: 10rem;
+    margin-left: 8% !important;
+}
+.title-close-div {
+    display: flex;
+    justify-content: space-between;
+}
+#comment-div-wrapper textarea {
+    appearance: none;
+    background-color: var(--bg-color);
+    font-size: 1.6rem;
+    padding: 2rem;
+    border-radius: 5px;
+    resize: none;
+}
+#comment-div-wrapper textarea::placeholder{
+    opacity: .5;
+}
+#comment-div-wrapper h2 {
+    color: var(--black-color);
+}
+
+/* add camp section */
+#add-camp-section{
+    margin: 1rem 0;
+}
+#add-camp-wrapper {
+    width: clamp(200px, 90%, 500px);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 3rem;
+    margin-left: 4%;
+}
+#add-camp-wrapper input {
+    background-color: var(--bg-color);
+    padding: 1.7rem 1rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+#add-camp-wrapper input::placeholder,
+ #add-camp-wrapper textarea::placeholder{
+    opacity: 0.3;
+}
+#add-camp-wrapper textarea{
+    resize: none;
+    appearance: none;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+/* footer */
+.footer-logo-div {
+    width: 85%;
+    margin: 7rem auto;
+}
+
+@media (min-width: 960px){
+
+    /* navigation */
+    header {
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .menu-bar-div {
+        display: none;
+    }
+    #logo-div{
+        display: flex;
+        width: 10%;
+        justify-content: flex-start;
+    }
+    #nav-div {
+        width: 87%;
+    }
+    nav #nav-wrapper, nav #account-div {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    nav #nav-wrapper {
+        position: relative;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        transform: translateX(0);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    #nav-wrapper:first-child {
+        margin-left: 3rem;
+    }
+
+    /* search section */
+    #search-section {
+        width: 87%;
+        margin-left: 7.8%;
+    }
+    #search-div-wrapper {
+        width: 90%;
+        margin-left: 6rem;
+    }
+    .search-div {
+        flex-direction: row;
+    }
+
+    /* Landing Page */
+    #landing-page-header{
+        position: fixed;
+        margin-left: 20rem;
+    }
+    /* hero div */
+    #hero-div {
+        width: 100vw;
+        flex-direction: row;
+        height: 100vh;
+    }
+    #hero-div #hero-img-div {
+        order: 2;
+        width: 70vw;
+        height: 100%;
+    }
+    #hero-div #hero-img-div img {
+        object-fit: cover;
+        object-position: center;
+    }
+    #hero-div #hero-details-div {
+        order: 1;
+        padding: 15rem 15rem 0 20rem;
+    }
+
+    /* sign up */
+    #signup-header {
+        position: fixed;
+        display: flex;
+        width: 60% !important;
+    }
+    #signup-div {
+        flex-direction: row;
+        width: 100%;
+    }
+    #signup-div .right-col {
+        background-color: var(--bg-color);
+        padding: 20rem 10rem;
+        width: 40%;
+        height: 100vh;
+    }
+    #signup-div .left-col {
+        display: flex;
+        gap: 3rem;
+        width: 60%;
+        margin: 5rem 0 0 0;
+        padding: 4rem 2rem 4rem 10rem;
+    }
+
+    /* camp pages  */
+    #camp-page-main {
+        display: grid;
+        padding: 0 2rem 0 1rem;
+        grid-template-areas: 
+        'back back'
+        'aside main'
+        'aside comment';
+    }
+    #back-to-home{
+        grid-area: back;
+        margin-left: 8rem;
+    }
+    #camp-details-section {
+        grid-area: main;
+    }
+    #reviews-section {
+        grid-area: comment;
+    }
+    #map-section {
+        grid-area: aside;
+        grid-row: 2/3;
+        margin-left: 7.5rem;
+    }
+    #reviews-wrapper button {
+        width: 200px;
+        margin: 3rem 3rem 3rem auto;
+        padding: 2rem 0 ;
+    }
+
+    /* add-camp-section */
+    #add-camp-wrapper {
+        margin: 0 auto;
+    }
+}

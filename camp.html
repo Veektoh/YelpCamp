@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d73527ae18.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="home-header">
+        <div id="logo-div">
+            <a href="home.html"><img src="images\Logo.svg" alt="Logo"></a>
+            <div class="menu-bar-div">
+                <button class="menu-bar-btn"><img src="images\Hamburger Menu.svg" alt="Menu Bar"></button>
+            </div> 
+        </div>
+        <nav id="nav-div">
+            <ul id="nav-wrapper">
+                <li><a href="home.html">Home</a></li>
+                <li id="account-div">
+                    <button><a href="signin.html" class="black-cl">Login</a></button>
+                    <a href="signup.html"><button class="primary-btn">Create an account</button></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="camp-page-main">
+        <section id="back-to-home">
+            <a href="home.html"><i class="fa-solid fa-arrow-left-long"></i>Back to campgrounds</a>
+        </section>
+        <section id="camp-details-section">
+            <div id="camp-details-wrapper">
+                <!-- <div class="camp-details-card">
+                    <div class="camp-img-div">
+                        <img src="images\Camp Images\High Quality Images\Mount Ulap.png" alt="mount Ulap">
+                    </div>
+                    <div class="camp-name-price-div">
+                        <h2> Mount Ulap</h2>
+                        <span>$104.99/night</span>
+                    </div>
+                    <div class="camp-description-div">
+                        <p>Mount Ulap is a 7.7 kilometer moderately trafficked point-to-point
+                            trail located near tuba, benguet, Philippines that offers the chance to
+                            see a wildlife and is rated as moderate. The trait is primary used for hiking
+                        </p>
+                    </div>
+                    <div class="camp-author">
+                        <span><i>Submitted by Andrew Mike</i></span>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <section id="reviews-section">
+            <div id="reviews-wrapper">
+                <!-- <div class="review-div">
+                    <div class="author-time-div">
+                        <h3>Adam Jones</h3>
+                        <span>13h ago</span>
+                    </div>
+                </div> -->
+                <button id="comment-open-btn" class="primary-btn"><i class="fa-regular fa-comment-dots"></i>Leave a Review</button>
+            </div>
+        </section>
+        <section id="map-section">
+            <div id="map-div">
+                <div class="map-img-div">
+                    <img src="images\Map.png" alt="map">
+                </div>
+            </div>
+        </section>
+        <section id="comment-div" class="hide">
+            <div id="comment-div-wrapper">
+                <div class="title-close-div">
+                    <h2>Add New Comment</h2>
+                    <button id="comment-close-btn"><img src="/images/Close.svg" alt="close"></button>
+                </div>
+                <label for="comment-box">Description</label>
+                <textarea id="comment-box" rows="10" cols="10" placeholder="This was probably the best camp i've visited this past year, definitely recommend visiting any time soon"></textarea>
+                <button class="primary-btn">Post Comment</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-logo-div">
+            <img src="\images\Logo.svg" alt="logo">
+        </div>
+    </footer>
+    <script src="app.js"></script>
+    <script src="loadcamppage.js"></script>
+</body>
+</html>
