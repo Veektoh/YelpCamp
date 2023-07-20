@@ -263,7 +263,7 @@ nav #nav-wrapper {
     display: flex;
     width: 85%;
     justify-content: space-between;
-    margin: 0 auto 2rem;
+    margin: 4rem auto 2rem;
     height: none;
     position: relative;
     top: 20px;
@@ -594,6 +594,7 @@ nav #nav-wrapper {
         position: fixed;
         display: flex;
         width: 60% !important;
+        margin-top: 0;
     }
     #signup-div {
         flex-direction: row;
