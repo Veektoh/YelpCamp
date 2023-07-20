@@ -263,7 +263,7 @@ nav #nav-wrapper {
     display: flex;
     width: 85%;
     justify-content: space-between;
-    margin: 4rem auto 2rem;
+    margin: 10rem auto 2rem;
     height: none;
     position: relative;
     top: 20px;
